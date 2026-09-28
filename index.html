@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kevin Zamorano · Páginas web para tu negocio</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Fraunces:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f8;--ink:#0f1b2d;--mut:#5a6779;--card:#fff;--line:#dde3ec;--acc:#0a7cff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1420;--ink:#eef2f8;--mut:#9aa8bc;--card:#151f30;--line:#25324a}}
+:root[data-theme="dark"]{--bg:#0d1420;--ink:#eef2f8;--mut:#9aa8bc;--card:#151f30;--line:#25324a}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 Manrope,system-ui,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;max-width:16ch}
+.sub{color:var(--mut);margin:14px 0 20px;max-width:52ch}
+.cta{display:inline-block;background:#1fb655;color:#fff;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;margin-right:8px}
+.cta.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:32px 0 14px;padding-bottom:4px}
+.tabs button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 14px Manrope;padding:10px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button:focus-visible,.cta:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.bar{display:flex;gap:6px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-size:12px;color:var(--mut)}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.bar span{margin-left:8px;background:var(--bg);padding:3px 12px;border-radius:99px}
+.note{color:var(--mut);font-size:14px;margin-top:12px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:36px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.plan b{font-size:26px;display:block;margin:4px 0 8px}
+.plan p{color:var(--mut);font-size:14px}
+/* demos */
+.d{font-family:Manrope,sans-serif}
+.d nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;gap:12px;flex-wrap:wrap}
+.d nav em{font-style:normal;font-size:13px;opacity:.75}
+.d .hero{padding:52px 22px 44px}
+.d .btn{display:inline-block;padding:11px 20px;font-weight:800;border:0;cursor:pointer;font-family:inherit;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:0 22px 26px}
+.sec{padding:8px 22px 6px;font-size:22px;font-weight:800}
+/* barber */
+.bar-d{background:#141414;color:#f2ede4;font-family:Oswald,sans-serif}
+.bar-d .hero{background:linear-gradient(120deg,#141414 55%,#2b2b2b);border-bottom:6px solid #c9a24b}
+.bar-d h2{font-size:clamp(38px,8vw,72px);line-height:.95;text-transform:uppercase;font-weight:700}
+.bar-d .btn{background:#c9a24b;color:#141414;font-family:Oswald;letter-spacing:.06em;margin-top:18px}
+.bar-d .it{border:1px solid #3a3a3a;padding:16px;display:flex;justify-content:space-between;align-items:center;font-size:18px}
+.bar-d .it span{color:#c9a24b;font-size:20px}
+.bar-d .sec{font-family:Oswald}
+.slots{display:flex;gap:8px;flex-wrap:wrap;padding:0 22px 28px}
+.slots button{background:none;border:1px solid #c9a24b;color:#c9a24b;font:500 15px Oswald;padding:8px 14px;cursor:pointer}
+.slots button.on{background:#c9a24b;color:#141414}
+/* resto */
+.res{background:#fbf7f0;color:#2b1a14;font-family:Fraunces,serif}
+.res .hero{background:linear-gradient(rgba(60,20,10,.62),rgba(60,20,10,.62)),repeating-linear-gradient(45deg,#7a3b25 0 14px,#8a4630 14px 28px);color:#fff7ea;text-align:center;padding:70px 22px}
+.res h2{font-size:clamp(34px,7vw,60px);line-height:1.05}
+.res .btn{background:#e8b35a;color:#2b1a14;border-radius:99px;margin-top:20px;font-family:Manrope}
+.res .m{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed #cdb9a3}
+.res .m b{font-weight:700}.res .m small{display:block;font-family:Manrope;color:#7b6656}
+.res .col{padding:0 22px 24px;columns:2 260px;column-gap:32px}
+/* tienda */
+.shop{background:#fff;color:#111827;font-family:Manrope,sans-serif}
+.shop .hero{background:linear-gradient(135deg,#eef2ff,#fde8f3);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.shop h2{font-size:clamp(30px,6vw,50px);font-weight:800;line-height:1.05;max-width:12ch}
+.shop .btn{background:#4338ca;color:#fff;border-radius:10px;margin-top:16px}
+.prod{border:1px solid #e5e7eb;border-radius:12px;padding:12px}
+.prod .im{height:110px;border-radius:8px;margin-bottom:10px}
+.prod p{font-size:14px;color:#6b7280}.prod b{display:block}
+.prod button{margin-top:8px;width:100%;background:#111827;color:#fff;border:0;border-radius:8px;padding:9px;font:700 13px Manrope;cursor:pointer}
+.cart{background:#111827;color:#fff;padding:8px 14px;border-radius:99px;font-weight:700;font-size:14px}
+/* pyme */
+.py{background:#f6fbf8;color:#10241b}
+.py .hero{background:#0f5132;color:#fff}
+.py h2{font-size:clamp(30px,6vw,50px);font-weight:800;line-height:1.05;max-width:18ch}
+.py .btn{background:#7ee2a8;color:#0f2b1e;border-radius:8px;margin-top:18px}
+.py .sv{background:#fff;border:1px solid #cfe6d8;border-radius:10px;padding:16px}
+.py .sv b{display:block;margin-bottom:4px}
+.py form{padding:0 22px 26px;display:flex;gap:8px;flex-wrap:wrap}
+.py input{flex:1 1 180px;padding:11px;border:1px solid #b8d6c5;border-radius:8px;font:inherit}
+.toast{padding:0 22px 22px;font-weight:700;color:#0f5132;min-height:22px}
+@media (prefers-reduced-motion:no-preference){.frame{transition:opacity .2s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tu negocio en internet, listo en pocos días</h1>
+  <p class="sub">Soy Kevin Zamorano, analista programador. Mira cómo puede verse tu página: elige un rubro y pruébala como la vería tu cliente.</p>
+  <a class="cta" href="https://wa.me/56964010415?text=Hola%20Kevin%2C%20quiero%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  <a class="cta alt" href="mailto:kevinzzz1@hotmail.com">kevinzzz1@hotmail.com</a>
+
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="frame"><div class="bar"><i></i><i></i><i></i><span id="url"></span></div><div id="view"></div></div>
+  <p class="note">Son ejemplos hechos a modo de demostración. Tu página se diseña con tu logo, tus colores y tus datos.</p>
+
+  <div class="plans">
+    <div class="plan"><p>Plan Básico</p><b>Desde $50.000</b><p>Página informativa (landing) adaptada a celular, con botón directo a WhatsApp y mapa.</p></div>
+    <div class="plan"><p>Plan E-commerce</p><b>Desde $150.000</b><p>Tienda online con catálogo, carrito y pedidos. Administrable por ti.</p></div>
+    <div class="plan"><p>Cómo trabajamos</p><b>Borrador en 48 h</b><p>Me cuentas de tu negocio, te muestro un borrador y luego publicamos. Hosting y dominio no incluidos.</p></div>
+  </div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const demos={
+barberia:{tab:'Barbería',url:'barberiaelfiltro.cl',html:()=>`
+<div class="d bar-d"><nav><b style="font-size:22px;letter-spacing:.08em">EL FILTRO</b><em>Lun a Sáb · 10:00 a 20:00</em></nav>
+<div class="hero"><h2>Corte y barba<br>como debe ser</h2><p style="margin-top:12px;opacity:.8;font-family:Manrope">Reserva tu hora en menos de un minuto.</p><a class="btn" href="#r">Reservar hora</a></div>
+<div class="sec" style="padding-top:22px">Servicios</div>
+<div class="grid"><div class="it">Corte clásico<span>$10.000</span></div><div class="it">Barba y perfilado<span>$7.000</span></div><div class="it">Corte + barba<span>$15.000</span></div></div>
+<div class="sec" id="r">Elige tu hora de hoy</div>
+<div class="slots" id="sl">${['11:00','12:00','15:30','17:00','18:30'].map(h=>`<button>${h}</button>`).join('')}</div>
+<div class="toast" style="color:#c9a24b" id="bt"></div></div>`,
+ init(){document.querySelectorAll('#sl button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#sl button').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#bt').textContent='Hora seleccionada: hoy a las '+b.textContent+'. Te confirmamos por WhatsApp.'})}},
+restaurante:{tab:'Restaurante',url:'lacocinadelaabuela.cl',html:()=>`
+<div class="d res"><nav><b style="font-size:22px">La Cocina de la Abuela</b><em>Almuerzos y cenas</em></nav>
+<div class="hero"><h2>Comida casera,<br>como en casa</h2><p style="margin-top:10px;font-family:Manrope">Menú del día desde $6.900</p><a class="btn" href="#m">Ver la carta</a></div>
+<div class="sec" id="m" style="padding-top:22px">Nuestra carta</div>
+<div class="col">
+<div class="m"><div><b>Pastel de choclo</b><small>Pino de vacuno, pollo y huevo</small></div><b>$8.500</b></div>
+<div class="m"><div><b>Cazuela de vacuno</b><small>Con choclo, papa y zapallo</small></div><b>$7.900</b></div>
+<div class="m"><div><b>Lomo a lo pobre</b><small>Papas fritas, cebolla y huevos</small></div><b>$10.900</b></div>
+<div class="m"><div><b>Porotos con riendas</b><small>Solo los jueves</small></div><b>$7.500</b></div>
+<div class="m"><div><b>Leche asada</b><small>Postre de la casa</small></div><b>$3.200</b></div>
+<div class="m"><div><b>Pedidos y delivery</b><small>Por WhatsApp</small></div><b>Consulta</b></div></div></div>`},
+tienda:{tab:'Tienda online',url:'urbanostore.cl',html:()=>{const p=[['Polera básica','$12.990','#c7d2fe'],['Jockey urbano','$9.990','#fbcfe8'],['Mochila diaria','$24.990','#bbf7d0'],['Zapatillas','$39.990','#fde68a']];return `
+<div class="d shop"><nav><b style="font-size:22px">URBANO</b><span class="cart" id="cart">Carrito: 0</span></nav>
+<div class="hero"><div><h2>Nueva colección</h2><p style="color:#6b7280;margin-top:8px">Envíos a todo Chile</p><a class="btn" href="#p">Comprar ahora</a></div></div>
+<div class="sec" id="p" style="padding-top:22px">Más vendidos</div>
+<div class="grid">${p.map(x=>`<div class="prod"><div class="im" style="background:${x[2]}"></div><b>${x[0]}</b><p>${x[1]}</p><button>Agregar al carrito</button></div>`).join('')}</div></div>`},
+ init(){let n=0;document.querySelectorAll('.prod button').forEach(b=>b.onclick=()=>{n++;$('#cart').textContent='Carrito: '+n})}},
+pyme:{tab:'Pyme de servicios',url:'klinerservicios.cl',html:()=>`
+<div class="d py"><nav><b style="font-size:22px;color:#0f5132">Kliner Servicios</b><em>Cobertura en todo Santiago</em></nav>
+<div class="hero"><h2>Limpieza profesional para tu empresa</h2><p style="margin-top:10px;opacity:.85">Oficinas, locales y bodegas. Cotización en el día.</p><a class="btn" href="#c">Pedir cotización</a></div>
+<div class="sec" style="padding-top:22px">Qué hacemos</div>
+<div class="grid"><div class="sv"><b>Aseo de oficinas</b>Diario, semanal o mensual.</div><div class="sv"><b>Limpieza post obra</b>Entrega lista para usar.</div><div class="sv"><b>Sanitización</b>Con certificado.</div></div>
+<div class="sec" id="c">Recibe tu cotización</div>
+<form id="f"><input placeholder="Tu nombre" required><input placeholder="Tu WhatsApp" required><button class="btn" style="background:#0f5132;color:#fff;border-radius:8px">Enviar</button></form>
+<div class="toast" id="ft"></div></div>`,
+ init(){$('#f').onsubmit=e=>{e.preventDefault();$('#ft').textContent='Recibido. Te contactamos hoy por WhatsApp.';e.target.reset()}}}
+};
+function show(k){const d=demos[k];$('#view').innerHTML=d.html();$('#url').textContent=d.url;d.init&&d.init();
+ document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k))}
+$('#tabs').innerHTML=Object.keys(demos).map(k=>`<button role="tab" data-k="${k}">${demos[k].tab}</button>`).join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>show(b.dataset.k));
+show('barberia');
+</script>
+</body>
+</html>
