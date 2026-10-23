@@ -1,147 +1,1089 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kevin Zamorano · Páginas web para tu negocio</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Fraunces:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kevin Zamorano | Desarrollador Web Freelance</title>
+<meta name="description" content="Desarrollador web freelance especializado en WordPress, e-commerce y desarrollo a medida. Sitios rápidos y autoadministrables para negocios que quieren crecer.">
+<meta name="theme-color" content="#09090b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f5f8;--ink:#0f1b2d;--mut:#5a6779;--card:#fff;--line:#dde3ec;--acc:#0a7cff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1420;--ink:#eef2f8;--mut:#9aa8bc;--card:#151f30;--line:#25324a}}
-:root[data-theme="dark"]{--bg:#0d1420;--ink:#eef2f8;--mut:#9aa8bc;--card:#151f30;--line:#25324a}
-*{box-sizing:border-box;margin:0}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{background:var(--bg);color:var(--ink);font:16px/1.5 Manrope,system-ui,sans-serif}
-.wrap{max-width:1000px;margin:0 auto;padding:28px 16px 48px}
-h1{font-size:clamp(30px,6vw,52px);line-height:1.05;font-weight:800;letter-spacing:-.02em;max-width:16ch}
-.sub{color:var(--mut);margin:14px 0 20px;max-width:52ch}
-.cta{display:inline-block;background:#1fb655;color:#fff;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;margin-right:8px}
-.cta.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-.tabs{display:flex;gap:8px;overflow-x:auto;margin:32px 0 14px;padding-bottom:4px}
-.tabs button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 14px Manrope;padding:10px 16px;border-radius:999px;cursor:pointer}
-.tabs button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.tabs button:focus-visible,.cta:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
-.bar{display:flex;gap:6px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-size:12px;color:var(--mut)}
-.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
-.bar span{margin-left:8px;background:var(--bg);padding:3px 12px;border-radius:99px}
-.note{color:var(--mut);font-size:14px;margin-top:12px}
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:36px}
-.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.plan b{font-size:26px;display:block;margin:4px 0 8px}
-.plan p{color:var(--mut);font-size:14px}
-/* demos */
-.d{font-family:Manrope,sans-serif}
-.d nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;gap:12px;flex-wrap:wrap}
-.d nav em{font-style:normal;font-size:13px;opacity:.75}
-.d .hero{padding:52px 22px 44px}
-.d .btn{display:inline-block;padding:11px 20px;font-weight:800;border:0;cursor:pointer;font-family:inherit;font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:0 22px 26px}
-.sec{padding:8px 22px 6px;font-size:22px;font-weight:800}
-/* barber */
-.bar-d{background:#141414;color:#f2ede4;font-family:Oswald,sans-serif}
-.bar-d .hero{background:linear-gradient(120deg,#141414 55%,#2b2b2b);border-bottom:6px solid #c9a24b}
-.bar-d h2{font-size:clamp(38px,8vw,72px);line-height:.95;text-transform:uppercase;font-weight:700}
-.bar-d .btn{background:#c9a24b;color:#141414;font-family:Oswald;letter-spacing:.06em;margin-top:18px}
-.bar-d .it{border:1px solid #3a3a3a;padding:16px;display:flex;justify-content:space-between;align-items:center;font-size:18px}
-.bar-d .it span{color:#c9a24b;font-size:20px}
-.bar-d .sec{font-family:Oswald}
-.slots{display:flex;gap:8px;flex-wrap:wrap;padding:0 22px 28px}
-.slots button{background:none;border:1px solid #c9a24b;color:#c9a24b;font:500 15px Oswald;padding:8px 14px;cursor:pointer}
-.slots button.on{background:#c9a24b;color:#141414}
-/* resto */
-.res{background:#fbf7f0;color:#2b1a14;font-family:Fraunces,serif}
-.res .hero{background:linear-gradient(rgba(60,20,10,.62),rgba(60,20,10,.62)),repeating-linear-gradient(45deg,#7a3b25 0 14px,#8a4630 14px 28px);color:#fff7ea;text-align:center;padding:70px 22px}
-.res h2{font-size:clamp(34px,7vw,60px);line-height:1.05}
-.res .btn{background:#e8b35a;color:#2b1a14;border-radius:99px;margin-top:20px;font-family:Manrope}
-.res .m{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed #cdb9a3}
-.res .m b{font-weight:700}.res .m small{display:block;font-family:Manrope;color:#7b6656}
-.res .col{padding:0 22px 24px;columns:2 260px;column-gap:32px}
-/* tienda */
-.shop{background:#fff;color:#111827;font-family:Manrope,sans-serif}
-.shop .hero{background:linear-gradient(135deg,#eef2ff,#fde8f3);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.shop h2{font-size:clamp(30px,6vw,50px);font-weight:800;line-height:1.05;max-width:12ch}
-.shop .btn{background:#4338ca;color:#fff;border-radius:10px;margin-top:16px}
-.prod{border:1px solid #e5e7eb;border-radius:12px;padding:12px}
-.prod .im{height:110px;border-radius:8px;margin-bottom:10px}
-.prod p{font-size:14px;color:#6b7280}.prod b{display:block}
-.prod button{margin-top:8px;width:100%;background:#111827;color:#fff;border:0;border-radius:8px;padding:9px;font:700 13px Manrope;cursor:pointer}
-.cart{background:#111827;color:#fff;padding:8px 14px;border-radius:99px;font-weight:700;font-size:14px}
-/* pyme */
-.py{background:#f6fbf8;color:#10241b}
-.py .hero{background:#0f5132;color:#fff}
-.py h2{font-size:clamp(30px,6vw,50px);font-weight:800;line-height:1.05;max-width:18ch}
-.py .btn{background:#7ee2a8;color:#0f2b1e;border-radius:8px;margin-top:18px}
-.py .sv{background:#fff;border:1px solid #cfe6d8;border-radius:10px;padding:16px}
-.py .sv b{display:block;margin-bottom:4px}
-.py form{padding:0 22px 26px;display:flex;gap:8px;flex-wrap:wrap}
-.py input{flex:1 1 180px;padding:11px;border:1px solid #b8d6c5;border-radius:8px;font:inherit}
-.toast{padding:0 22px 22px;font-weight:700;color:#0f5132;min-height:22px}
-@media (prefers-reduced-motion:no-preference){.frame{transition:opacity .2s}}
+  /* Layout: landing de una columna con hero asimétrico (texto + maqueta de tienda), tarjetas en rejilla. */
+  :root {
+    --bg: #09090b;
+    --surface: #18181b;
+    --line: #27272a;
+    --fg: #d4d4d8;
+    --accent: #22d3ee;
+    --accent-2: #2563eb;
+    --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: dark;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; }
+  html .font-sans { font-family: var(--font-body); }
+  html .font-mono { font-family: var(--font-mono); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Tu negocio en internet, listo en pocos días</h1>
-  <p class="sub">Soy Kevin Zamorano, analista programador. Mira cómo puede verse tu página: elige un rubro y pruébala como la vería tu cliente.</p>
-  <a class="cta" href="https://wa.me/56964010415?text=Hola%20Kevin%2C%20quiero%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-  <a class="cta alt" href="mailto:kevinzzz1@hotmail.com">kevinzzz1@hotmail.com</a>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide-react@0.263.1/dist/umd/lucide-react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.7/babel.min.js"></script>
+<script type="text/babel">
+const { useState } = React;
+const __L = window.lucideReact || {};
+const __ic = (n) => __L[n] || (() => null);
+const Menu = __ic("Menu");
+const X = __ic("X");
+const ArrowRight = __ic("ArrowRight");
+const Code2 = __ic("Code2");
+const ShoppingCart = __ic("ShoppingCart");
+const Server = __ic("Server");
+const Gauge = __ic("Gauge");
+const MessageCircle = __ic("MessageCircle");
+const Send = __ic("Send");
+const Camera = __ic("Camera");
+const Mountain = __ic("Mountain");
+const Globe = __ic("Globe");
+const Palette = __ic("Palette");
+const Braces = __ic("Braces");
+const Database = __ic("Database");
+const HardDrive = __ic("HardDrive");
+const Smartphone = __ic("Smartphone");
+const Search = __ic("Search");
+const Zap = __ic("Zap");
+const Layers = __ic("Layers");
+const Store = __ic("Store");
+const Phone = __ic("Phone");
+const Check = __ic("Check");
+const Wrench = __ic("Wrench");
+const Layout = __ic("Layout");
+const ExternalLink = __ic("ExternalLink");
+const Copy = __ic("Copy");
+const Mail = __ic("Mail");
+const Key = __ic("Key");
+const Lock = __ic("Lock");
+const MapPin = __ic("MapPin");
+const Plus = __ic("Plus");
+const ShieldCheck = __ic("ShieldCheck");
 
-  <div class="tabs" role="tablist" id="tabs"></div>
-  <div class="frame"><div class="bar"><i></i><i></i><i></i><span id="url"></span></div><div id="view"></div></div>
-  <p class="note">Son ejemplos hechos a modo de demostración. Tu página se diseña con tu logo, tus colores y tus datos.</p>
 
-  <div class="plans">
-    <div class="plan"><p>Plan Básico</p><b>Desde $50.000</b><p>Página informativa (landing) adaptada a celular, con botón directo a WhatsApp y mapa.</p></div>
-    <div class="plan"><p>Plan E-commerce</p><b>Desde $150.000</b><p>Tienda online con catálogo, carrito y pedidos. Administrable por ti.</p></div>
-    <div class="plan"><p>Cómo trabajamos</p><b>Borrador en 48 h</b><p>Me cuentas de tu negocio, te muestro un borrador y luego publicamos. Hosting y dominio no incluidos.</p></div>
-  </div>
-</div>
-
-<script>
-const $=s=>document.querySelector(s);
-const demos={
-barberia:{tab:'Barbería',url:'barberiaelfiltro.cl',html:()=>`
-<div class="d bar-d"><nav><b style="font-size:22px;letter-spacing:.08em">EL FILTRO</b><em>Lun a Sáb · 10:00 a 20:00</em></nav>
-<div class="hero"><h2>Corte y barba<br>como debe ser</h2><p style="margin-top:12px;opacity:.8;font-family:Manrope">Reserva tu hora en menos de un minuto.</p><a class="btn" href="#r">Reservar hora</a></div>
-<div class="sec" style="padding-top:22px">Servicios</div>
-<div class="grid"><div class="it">Corte clásico<span>$10.000</span></div><div class="it">Barba y perfilado<span>$7.000</span></div><div class="it">Corte + barba<span>$15.000</span></div></div>
-<div class="sec" id="r">Elige tu hora de hoy</div>
-<div class="slots" id="sl">${['11:00','12:00','15:30','17:00','18:30'].map(h=>`<button>${h}</button>`).join('')}</div>
-<div class="toast" style="color:#c9a24b" id="bt"></div></div>`,
- init(){document.querySelectorAll('#sl button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#sl button').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#bt').textContent='Hora seleccionada: hoy a las '+b.textContent+'. Te confirmamos por WhatsApp.'})}},
-restaurante:{tab:'Restaurante',url:'lacocinadelaabuela.cl',html:()=>`
-<div class="d res"><nav><b style="font-size:22px">La Cocina de la Abuela</b><em>Almuerzos y cenas</em></nav>
-<div class="hero"><h2>Comida casera,<br>como en casa</h2><p style="margin-top:10px;font-family:Manrope">Menú del día desde $6.900</p><a class="btn" href="#m">Ver la carta</a></div>
-<div class="sec" id="m" style="padding-top:22px">Nuestra carta</div>
-<div class="col">
-<div class="m"><div><b>Pastel de choclo</b><small>Pino de vacuno, pollo y huevo</small></div><b>$8.500</b></div>
-<div class="m"><div><b>Cazuela de vacuno</b><small>Con choclo, papa y zapallo</small></div><b>$7.900</b></div>
-<div class="m"><div><b>Lomo a lo pobre</b><small>Papas fritas, cebolla y huevos</small></div><b>$10.900</b></div>
-<div class="m"><div><b>Porotos con riendas</b><small>Solo los jueves</small></div><b>$7.500</b></div>
-<div class="m"><div><b>Leche asada</b><small>Postre de la casa</small></div><b>$3.200</b></div>
-<div class="m"><div><b>Pedidos y delivery</b><small>Por WhatsApp</small></div><b>Consulta</b></div></div></div>`},
-tienda:{tab:'Tienda online',url:'urbanostore.cl',html:()=>{const p=[['Polera básica','$12.990','#c7d2fe'],['Jockey urbano','$9.990','#fbcfe8'],['Mochila diaria','$24.990','#bbf7d0'],['Zapatillas','$39.990','#fde68a']];return `
-<div class="d shop"><nav><b style="font-size:22px">URBANO</b><span class="cart" id="cart">Carrito: 0</span></nav>
-<div class="hero"><div><h2>Nueva colección</h2><p style="color:#6b7280;margin-top:8px">Envíos a todo Chile</p><a class="btn" href="#p">Comprar ahora</a></div></div>
-<div class="sec" id="p" style="padding-top:22px">Más vendidos</div>
-<div class="grid">${p.map(x=>`<div class="prod"><div class="im" style="background:${x[2]}"></div><b>${x[0]}</b><p>${x[1]}</p><button>Agregar al carrito</button></div>`).join('')}</div></div>`},
- init(){let n=0;document.querySelectorAll('.prod button').forEach(b=>b.onclick=()=>{n++;$('#cart').textContent='Carrito: '+n})}},
-pyme:{tab:'Pyme de servicios',url:'klinerservicios.cl',html:()=>`
-<div class="d py"><nav><b style="font-size:22px;color:#0f5132">Kliner Servicios</b><em>Cobertura en todo Santiago</em></nav>
-<div class="hero"><h2>Limpieza profesional para tu empresa</h2><p style="margin-top:10px;opacity:.85">Oficinas, locales y bodegas. Cotización en el día.</p><a class="btn" href="#c">Pedir cotización</a></div>
-<div class="sec" style="padding-top:22px">Qué hacemos</div>
-<div class="grid"><div class="sv"><b>Aseo de oficinas</b>Diario, semanal o mensual.</div><div class="sv"><b>Limpieza post obra</b>Entrega lista para usar.</div><div class="sv"><b>Sanitización</b>Con certificado.</div></div>
-<div class="sec" id="c">Recibe tu cotización</div>
-<form id="f"><input placeholder="Tu nombre" required><input placeholder="Tu WhatsApp" required><button class="btn" style="background:#0f5132;color:#fff;border-radius:8px">Enviar</button></form>
-<div class="toast" id="ft"></div></div>`,
- init(){$('#f').onsubmit=e=>{e.preventDefault();$('#ft').textContent='Recibido. Te contactamos hoy por WhatsApp.';e.target.reset()}}}
+/* ------------------------------------------------------------------ */
+/*  Configuración rápida: cambia estos valores por los tuyos           */
+/* ------------------------------------------------------------------ */
+const WHATSAPP_NUMBER = "56964010415"; // formato internacional, sin "+" ni espacios
+const PHONE_LABEL = "+56 9 6401 0415";
+const EMAIL = "kevinzzz1@hotmail.com";
+const DISPLAY_FONT = {
+  fontFamily: "'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif",
 };
-function show(k){const d=demos[k];$('#view').innerHTML=d.html();$('#url').textContent=d.url;d.init&&d.init();
- document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k))}
-$('#tabs').innerHTML=Object.keys(demos).map(k=>`<button role="tab" data-k="${k}">${demos[k].tab}</button>`).join('');
-document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>show(b.dataset.k));
-show('barberia');
+
+const NAV = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#sobre-mi", label: "Sobre mí" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#proyectos", label: "Proyectos" },
+  { href: "#contacto", label: "Contacto" },
+];
+
+const SKILLS = [
+  {
+    title: "Frontend",
+    icon: Code2,
+    items: [
+      { label: "HTML5", icon: Layout },
+      { label: "CSS3", icon: Palette },
+      { label: "JavaScript", icon: Braces },
+    ],
+  },
+  {
+    title: "CMS & E-commerce",
+    icon: ShoppingCart,
+    items: [
+      { label: "WordPress Avanzado", icon: Globe },
+      { label: "WooCommerce", icon: Store },
+      { label: "Elementor", icon: Layers },
+    ],
+  },
+  {
+    title: "Backend & Servidores",
+    icon: Server,
+    items: [
+      { label: "PHP", icon: Code2 },
+      { label: "MySQL", icon: Database },
+      { label: "CPanel", icon: Wrench },
+      { label: "Hosting", icon: HardDrive },
+    ],
+  },
+  {
+    title: "Especialidades",
+    icon: Gauge,
+    items: [
+      { label: "Diseño Responsive", icon: Smartphone },
+      { label: "SEO Técnico", icon: Search },
+      { label: "Web Performance", icon: Zap },
+    ],
+  },
+];
+
+const PROJECTS = [
+  {
+    type: "E-commerce",
+    title: "E-commerce Marca de Convenio",
+    thumb: "store",
+    url: "https://aspconveniomarco.cl/",
+    domain: "aspconveniomarco.cl",
+    challenge: "Digitalizar catálogo y ventas online para marca de convenios.",
+    solution:
+      "E-commerce escalable, pasarelas de pago y panel autoadministrable.",
+    stack: ["WordPress", "WooCommerce", "PHP", "CSS"],
+  },
+  {
+    type: "Sitio web · Servicios",
+    title: "Registra la Marca",
+    thumb: "brand",
+    url: "https://registralamarca.cl/",
+    domain: "registralamarca.cl",
+    challenge:
+      "Presentar el servicio de registro de marcas y facilitar que los clientes hagan su consulta.",
+    solution:
+      "Sitio web claro y rápido, pensado para captar consultas de nuevos clientes.",
+    stack: ["Desarrollo web"],
+  },
+  {
+    type: "Tienda online · Mobile-first",
+    title: "Tienda Online Panadería Local",
+    thumb: "bakery",
+    challenge:
+      "Canal de ventas digital rápido para pedidos desde celulares.",
+    solution:
+      "UX mobile-first, compra en 3 clics y conexión directa a WhatsApp para despachos.",
+    stack: ["WordPress", "UI/UX Mobile", "API WhatsApp"],
+  },
+  {
+    type: "Landing page · One page",
+    title: "Landing Page Cerrajería 24/7",
+    thumb: "locksmith",
+    url: "https://www.cerrajeriamagakey.cl/",
+    domain: "cerrajeriamagakey.cl",
+    challenge: "Captación urgente de leads (clientes) en buscadores.",
+    solution:
+      'Sitio "One Page" ultra rápido con botones de llamada de emergencia.',
+    stack: ["HTML5", "CSS3", "JavaScript (A medida)"],
+  },
+  {
+    type: "Sitio web · Construcción",
+    title: "JC Inversiones y Vibrados",
+    thumb: "concrete",
+    url: "https://www.jcinversionesyvibrados.cl/",
+    domain: "jcinversionesyvibrados.cl",
+    challenge:
+      "Mostrar el catálogo de prefabricados de hormigón y convertir las visitas en cotizaciones.",
+    solution:
+      "Sitio a medida con galería de trabajos, proceso en 4 pasos, preguntas frecuentes y un formulario que abre WhatsApp con la cotización lista.",
+    stack: ["HTML5", "CSS3", "JavaScript (A medida)"],
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  Piezas pequeñas                                                    */
+/* ------------------------------------------------------------------ */
+const Eyebrow = ({ children }) => (
+  <p className="font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
+    {children}
+  </p>
+);
+
+const Section = ({ id, eyebrow, title, children }) => (
+  <section id={id} className="scroll-mt-20 py-16 sm:py-24">
+    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+      {(eyebrow || title) && (
+        <header className="mb-10 max-w-2xl sm:mb-14">
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+          {title && (
+            <h2
+              style={DISPLAY_FONT}
+              className="mt-3 text-3xl font-bold tracking-tight text-zinc-50 [text-wrap:balance] sm:text-4xl"
+            >
+              {title}
+            </h2>
+          )}
+        </header>
+      )}
+      {children}
+    </div>
+  </section>
+);
+
+const PrimaryButton = ({ href, children, icon: Icon, ...rest }) => (
+  <a
+    href={href}
+    {...rest}
+    className="group inline-flex items-center justify-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+  >
+    {children}
+    {Icon && (
+      <Icon className="h-4 w-4 transition group-hover:translate-x-0.5" />
+    )}
+  </a>
+);
+
+const GhostButton = ({ href, children }) => (
+  <a
+    href={href}
+    className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:border-blue-500 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+  >
+    {children}
+  </a>
+);
+
+/* Maqueta decorativa del hero: una tienda dentro de una ventana de navegador */
+const HeroMock = () => (
+  <div aria-hidden="true" className="relative">
+    <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 shadow-2xl shadow-blue-600/10">
+      <div className="flex items-center gap-2 border-b border-zinc-800 px-3 py-2.5">
+        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+        <div className="ml-2 flex-1 truncate rounded-md bg-zinc-950 px-3 py-1 font-mono text-xs text-zinc-500">
+          https://tunegocio.cl
+        </div>
+      </div>
+      <div className="space-y-4 p-4 sm:p-5">
+        <div className="flex items-center justify-between">
+          <div className="h-3 w-20 rounded bg-zinc-700" />
+          <div className="flex items-center gap-3">
+            <div className="hidden h-2 w-10 rounded bg-zinc-800 sm:block" />
+            <div className="hidden h-2 w-10 rounded bg-zinc-800 sm:block" />
+            <ShoppingCart className="h-4 w-4 text-cyan-400" />
+          </div>
+        </div>
+        <div className="rounded-lg border border-zinc-800 bg-gradient-to-br from-blue-600/25 via-zinc-900 to-cyan-400/10 p-5">
+          <div className="h-3 w-3/5 rounded bg-zinc-200/80" />
+          <div className="mt-2 h-3 w-2/5 rounded bg-zinc-200/60" />
+          <div className="mt-4 inline-flex rounded-md bg-cyan-400 px-3 py-1.5 text-xs font-semibold text-zinc-950">
+            Comprar ahora
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="rounded-lg border border-zinc-800 bg-zinc-950 p-2"
+            >
+              <div className="aspect-square rounded bg-zinc-800" />
+              <div className="mt-2 h-2 w-4/5 rounded bg-zinc-700" />
+              <div className="mt-1.5 h-2 w-2/5 rounded bg-cyan-400/60" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div className="absolute -bottom-4 left-4 flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-xs font-medium text-zinc-200 shadow-lg sm:left-auto sm:right-6">
+      <Check className="h-4 w-4 text-cyan-400" />
+      Panel autoadministrable
+    </div>
+  </div>
+);
+
+/* Marco de navegador con la URL real del proyecto */
+const BrowserFrame = ({ domain, children }) => (
+  <div className="overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900 shadow-2xl shadow-black/50">
+    <div className="flex items-center gap-2 border-b border-zinc-800 px-3 py-2.5">
+      <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+      <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+      <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
+      <div className="ml-2 flex min-w-0 flex-1 items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1 font-mono text-xs text-zinc-400">
+        <Lock className="h-3 w-3 shrink-0 text-cyan-400" />
+        <span className="truncate">{domain}</span>
+      </div>
+    </div>
+    <div className="aspect-[16/10] overflow-hidden">{children}</div>
+  </div>
+);
+
+const Bar = ({ className = "" }) => (
+  <span className={`block h-2 rounded ${className}`} />
+);
+
+/* ---- Tienda de convenios: catálogo + carrito + pago seguro ---- */
+const ShotStore = () => (
+  <div className="flex h-full flex-col bg-zinc-50 text-zinc-800">
+    <div className="flex items-center justify-between bg-white px-4 py-2.5 shadow-sm">
+      <span className="h-3 w-16 rounded bg-indigo-600" />
+      <div className="hidden items-center gap-3 sm:flex">
+        <Bar className="w-8 bg-zinc-300" />
+        <Bar className="w-10 bg-zinc-300" />
+        <Bar className="w-8 bg-zinc-300" />
+      </div>
+      <span className="relative">
+        <ShoppingCart className="h-4 w-4 text-zinc-700" />
+        <span className="absolute -right-2 -top-2 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-indigo-600 text-[8px] font-bold text-white">
+          3
+        </span>
+      </span>
+    </div>
+    <div className="mx-4 mt-3 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-500 p-3">
+      <span className="block h-2.5 w-2/5 rounded bg-white/90" />
+      <span className="mt-1.5 block h-2 w-1/4 rounded bg-white/60" />
+      <span className="mt-2.5 inline-block rounded bg-white px-2 py-1 text-[9px] font-semibold text-indigo-700">
+        Ver catálogo
+      </span>
+    </div>
+    <div className="grid flex-1 grid-cols-4 gap-2 px-4 pt-3">
+      {[
+        "from-indigo-200 to-blue-100",
+        "from-sky-200 to-indigo-100",
+        "from-blue-200 to-cyan-100",
+        "from-violet-200 to-indigo-100",
+      ].map((g, i) => (
+        <div key={i} className="rounded-md border border-zinc-200 bg-white p-1.5">
+          <div className={`aspect-square rounded bg-gradient-to-br ${g}`} />
+          <Bar className="mt-1.5 w-4/5 bg-zinc-300" />
+          <span className="mt-1.5 inline-block rounded bg-indigo-50 px-1.5 py-0.5 text-[8px] font-semibold text-indigo-700">
+            $ 00.000
+          </span>
+        </div>
+      ))}
+    </div>
+    <div className="flex items-center justify-center gap-1.5 py-2 text-[9px] font-medium text-zinc-500">
+      <Lock className="h-3 w-3 text-indigo-600" />
+      Pago seguro
+    </div>
+  </div>
+);
+
+/* ---- Registra la Marca: servicio + pasos ---- */
+const ShotBrand = () => (
+  <div className="flex h-full flex-col bg-white text-zinc-800">
+    <div className="flex items-center justify-between border-b border-zinc-100 px-4 py-2.5">
+      <span className="flex items-center gap-1.5">
+        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-400 text-[10px] font-bold text-zinc-900">
+          ®
+        </span>
+        <span className="h-2.5 w-14 rounded bg-zinc-800" />
+      </span>
+      <div className="hidden items-center gap-3 sm:flex">
+        <Bar className="w-8 bg-zinc-300" />
+        <Bar className="w-8 bg-zinc-300" />
+      </div>
+      <span className="rounded bg-zinc-900 px-2 py-1 text-[8px] font-semibold text-white">
+        Consultar
+      </span>
+    </div>
+    <div className="grid flex-1 grid-cols-[1.2fr_0.8fr] items-center gap-3 bg-gradient-to-br from-amber-50 to-white px-4">
+      <div>
+        <Bar className="h-2.5 w-11/12 bg-zinc-800" />
+        <Bar className="mt-1.5 h-2.5 w-3/5 bg-zinc-800" />
+        <Bar className="mt-3 w-4/5 bg-zinc-300" />
+        <Bar className="mt-1.5 w-2/3 bg-zinc-300" />
+        <span className="mt-3 inline-block rounded bg-amber-400 px-2.5 py-1.5 text-[9px] font-bold text-zinc-900">
+          Registrar mi marca
+        </span>
+      </div>
+      <div className="flex justify-center">
+        <span className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-amber-400 bg-white text-3xl font-bold text-amber-500 shadow-lg">
+          ®
+        </span>
+      </div>
+    </div>
+    <div className="grid grid-cols-3 gap-2 border-t border-zinc-100 bg-white px-4 py-3">
+      {[Search, Layers, ShieldCheck].map((Ic, i) => (
+        <div key={i} className="rounded-md border border-zinc-200 p-2">
+          <Ic className="h-3.5 w-3.5 text-amber-500" />
+          <Bar className="mt-1.5 w-4/5 bg-zinc-300" />
+          <Bar className="mt-1 w-3/5 bg-zinc-200" />
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+/* ---- Panadería: celular con pedido en 3 pasos y WhatsApp ---- */
+const ShotBakery = () => (
+  <div
+    className="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-black/50"
+    style={{
+      backgroundImage:
+        "radial-gradient(rgba(113,113,122,0.28) 1px, transparent 1px)",
+      backgroundSize: "16px 16px",
+    }}
+  >
+    <div className="flex h-[86%] w-[34%] min-w-[7.5rem] max-w-[11rem] flex-col overflow-hidden rounded-[1.6rem] border-4 border-zinc-700 bg-amber-50 shadow-xl">
+      <div className="bg-amber-500 px-3 py-2">
+        <span className="block h-2 w-14 rounded bg-white/90" />
+        <div className="mt-2 flex gap-1.5">
+          {["1", "2", "3"].map((n) => (
+            <span
+              key={n}
+              className="flex h-4 w-4 items-center justify-center rounded-full bg-white/90 font-mono text-[8px] font-bold text-amber-700"
+            >
+              {n}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="flex-1 space-y-2 overflow-hidden p-2">
+        {[
+          "from-amber-300 to-orange-200",
+          "from-orange-300 to-amber-200",
+          "from-yellow-300 to-amber-200",
+        ].map((g, i) => (
+          <div key={i} className="flex items-center gap-2 rounded-lg bg-white p-1.5 shadow-sm">
+            <span className={`h-8 w-8 shrink-0 rounded-md bg-gradient-to-br ${g}`} />
+            <div className="min-w-0 flex-1">
+              <Bar className="w-4/5 bg-zinc-300" />
+              <Bar className="mt-1 w-2/5 bg-amber-300" />
+            </div>
+            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500 text-white">
+              <Plus className="h-3 w-3" />
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="m-2 flex items-center justify-center gap-1 rounded-lg bg-emerald-500 py-1.5 text-[9px] font-bold text-white">
+        <MessageCircle className="h-3 w-3" />
+        Pedir por WhatsApp
+      </div>
+    </div>
+    <div className="absolute right-[6%] top-[22%] flex max-w-[44%] items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-3 py-2 shadow-lg">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white">
+        <MessageCircle className="h-3.5 w-3.5" />
+      </span>
+      <div className="min-w-0">
+        <p className="truncate text-[10px] font-semibold text-zinc-100">Nuevo pedido</p>
+        <p className="truncate text-[9px] text-zinc-400">3 productos · despacho</p>
+      </div>
+    </div>
+    <div className="absolute bottom-[10%] left-[6%] hidden items-center gap-1.5 rounded-lg border border-zinc-700 bg-zinc-900 px-2.5 py-1.5 font-mono text-[10px] text-cyan-300 shadow-lg sm:flex">
+      <Zap className="h-3 w-3" />
+      Compra en 3 clics
+    </div>
+  </div>
+);
+
+/* ---- Cerrajería: llamada de emergencia + cobertura ---- */
+const ShotLocksmith = () => (
+  <div className="flex h-full flex-col bg-zinc-900 text-zinc-100">
+    <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-2.5">
+      <span className="flex items-center gap-1.5">
+        <Key className="h-4 w-4 text-red-400" />
+        <span className="h-2.5 w-14 rounded bg-zinc-200" />
+      </span>
+      <span className="flex items-center gap-1 rounded bg-red-500 px-2 py-1 text-[8px] font-bold text-white">
+        <Phone className="h-2.5 w-2.5" />
+        Llamar
+      </span>
+    </div>
+    <div className="grid flex-1 grid-cols-[1.2fr_0.8fr] items-center gap-3 bg-gradient-to-br from-zinc-900 to-zinc-800 px-4">
+      <div>
+        <Bar className="h-2.5 w-11/12 bg-zinc-100" />
+        <Bar className="mt-1.5 h-2.5 w-2/3 bg-zinc-100" />
+        <Bar className="mt-3 w-4/5 bg-zinc-600" />
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          <span className="flex items-center gap-1 rounded bg-red-500 px-2 py-1.5 text-[9px] font-bold text-white">
+            <Phone className="h-3 w-3" />
+            Llamar ahora
+          </span>
+          <span className="flex items-center gap-1 rounded bg-emerald-500 px-2 py-1.5 text-[9px] font-bold text-white">
+            <MessageCircle className="h-3 w-3" />
+            WhatsApp
+          </span>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <span className="relative flex h-20 w-20 items-center justify-center">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500/20 motion-reduce:animate-none" />
+          <span className="relative flex h-20 w-20 items-center justify-center rounded-full border-2 border-red-400/60 bg-zinc-900">
+            <Key className="h-9 w-9 text-red-400" />
+          </span>
+        </span>
+      </div>
+    </div>
+    <div className="space-y-2 border-t border-zinc-800 px-4 py-3">
+      <div className="flex flex-wrap gap-1.5">
+        {["Apertura de autos", "Copias de llaves", "Llaves con chip"].map((s) => (
+          <span key={s} className="rounded bg-zinc-800 px-2 py-1 text-[8px] font-medium text-zinc-200">
+            {s}
+          </span>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-1.5 text-[8px] text-zinc-400">
+        <MapPin className="h-3 w-3 text-red-400" />
+        Viña del Mar · Valparaíso · Villa Alemana
+      </div>
+    </div>
+  </div>
+);
+
+/* ---- JC Inversiones y Vibrados: cierres de hormigón + cotización ---- */
+const ShotConcrete = () => (
+  <div className="flex h-full flex-col bg-stone-100 text-stone-800">
+    <div className="flex items-center justify-between bg-stone-900 px-4 py-2.5">
+      <span className="flex items-center gap-1.5">
+        <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500 font-mono text-[8px] font-bold text-white">
+          JC
+        </span>
+        <span className="h-2.5 w-14 rounded bg-stone-300" />
+      </span>
+      <span className="flex items-center gap-1 rounded bg-orange-500 px-2 py-1 text-[8px] font-bold text-white">
+        <MessageCircle className="h-2.5 w-2.5" />
+        Cotiza
+      </span>
+    </div>
+    <div className="grid flex-1 grid-cols-[1fr_1fr] items-center gap-3 bg-gradient-to-br from-stone-200 to-stone-100 px-4">
+      <div>
+        <Bar className="h-2.5 w-11/12 bg-stone-800" />
+        <Bar className="mt-1.5 h-2.5 w-3/5 bg-stone-800" />
+        <Bar className="mt-3 w-4/5 bg-stone-400" />
+        <span className="mt-3 inline-flex items-center gap-1 rounded bg-orange-500 px-2.5 py-1.5 text-[9px] font-bold text-white">
+          <MessageCircle className="h-3 w-3" />
+          Cotiza por WhatsApp
+        </span>
+      </div>
+      <div className="grid grid-cols-3 gap-1">
+        {[0, 1, 2, 3, 4, 5].map((i) => (
+          <div
+            key={i}
+            className="aspect-[3/4] rounded-sm border border-stone-400 bg-gradient-to-b from-stone-300 to-stone-400 p-1"
+          >
+            <div className="h-full rounded-sm border border-stone-500/40" />
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="border-t border-stone-300 bg-white px-4 py-3">
+      <div className="flex flex-wrap gap-1.5">
+        {["Cierres", "Panderetas", "Postes", "Bloques", "Pastelones"].map((s) => (
+          <span key={s} className="rounded bg-stone-100 px-2 py-1 text-[8px] font-medium text-stone-700">
+            {s}
+          </span>
+        ))}
+      </div>
+      <div className="mt-2 flex items-center gap-1 text-[8px] text-stone-500">
+        <MapPin className="h-3 w-3 text-orange-500" />
+        Limache · V Región · Litoral
+      </div>
+    </div>
+  </div>
+);
+
+const ProjectShot = ({ p }) => {
+  if (p.image) {
+    return (
+      <BrowserFrame domain={p.domain}>
+        <img src={p.image} alt={`Captura de ${p.title}`} className="h-full w-full object-cover object-top" />
+      </BrowserFrame>
+    );
+  }
+  const body = {
+    store: <ShotStore />,
+    brand: <ShotBrand />,
+    locksmith: <ShotLocksmith />,
+    concrete: <ShotConcrete />,
+  }[p.thumb];
+  return (
+    <div className="relative">
+      {p.thumb === "bakery" ? (
+        <ShotBakery />
+      ) : (
+        <BrowserFrame domain={p.domain}>{body}</BrowserFrame>
+      )}
+      <span className="absolute bottom-2 right-2 rounded bg-zinc-950/80 px-2 py-0.5 font-mono text-[10px] text-zinc-500">
+        Vista ilustrativa
+      </span>
+    </div>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/*  Componente principal                                               */
+/* ------------------------------------------------------------------ */
+function Portfolio() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState({});
+  const [ready, setReady] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    try {
+      navigator.clipboard
+        .writeText(EMAIL)
+        .then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        })
+        .catch(() => {});
+    } catch (err) {
+      /* si el navegador lo bloquea, el correo queda como texto seleccionable */
+    }
+  };
+
+  const update = (field) => (e) => {
+    setForm((f) => ({ ...f, [field]: e.target.value }));
+    setReady(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const next = {};
+    if (form.name.trim().length < 2) next.name = "Escribe tu nombre.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
+      next.email = "Escribe un email válido, por ejemplo nombre@empresa.cl.";
+    if (form.message.trim().length < 10)
+      next.message = "Cuéntame un poco más de tu proyecto (mínimo 10 caracteres).";
+    setErrors(next);
+    setReady(Object.keys(next).length === 0);
+  };
+
+  const waText = encodeURIComponent(
+    `Hola Kevin, soy ${form.name.trim() || "..."} (${form.email.trim() || "..."}). ${form.message.trim()}`
+  );
+  const waFormLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
+  const waDirectLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Hola Kevin, quiero cotizar un proyecto web."
+  )}`;
+
+  const field =
+    "w-full rounded-lg border bg-zinc-950 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 transition focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/30";
+
+  return (
+    <div className="min-h-screen bg-zinc-950 font-sans text-zinc-300 antialiased selection:bg-cyan-400/30">
+      {/* ---------------------------- Header ---------------------------- */}
+      <header
+        className="sticky z-40 border-b border-zinc-800/80 bg-zinc-950/85 backdrop-blur"
+        style={{ top: "env(safe-area-inset-top, 0px)" }}
+      >
+        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+          <a
+            href="#inicio"
+            className="flex items-center gap-2.5 text-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-400"
+          >
+            <span className="flex h-8 w-8 items-center justify-center rounded-md border border-cyan-400/40 bg-cyan-400/10 font-mono text-xs font-bold text-cyan-300">
+              KZ
+            </span>
+            <span style={DISPLAY_FONT} className="text-base font-semibold">
+              Kevin Zamorano
+            </span>
+          </a>
+
+          <nav aria-label="Principal" className="hidden items-center gap-7 md:flex">
+            {NAV.slice(0, 4).map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-zinc-400 transition hover:text-zinc-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-400"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href="#contacto"
+              className="rounded-lg border border-cyan-400/50 px-4 py-2 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-400 hover:text-zinc-950"
+            >
+              Contacto
+            </a>
+          </nav>
+
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 text-zinc-200 md:hidden"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+            aria-controls="menu-movil"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <nav
+            id="menu-movil"
+            aria-label="Principal móvil"
+            className="border-t border-zinc-800 bg-zinc-950 md:hidden"
+          >
+            <ul className="mx-auto flex max-w-6xl flex-col px-4 py-2 sm:px-6">
+              {NAV.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block rounded-md px-2 py-3 text-base text-zinc-200 hover:bg-zinc-900"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </header>
+
+      <main>
+        {/* ----------------------------- Hero ----------------------------- */}
+        <section id="inicio" className="scroll-mt-20 pb-16 pt-12 sm:pb-24 sm:pt-20">
+          <div className="mx-auto grid w-full max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+            <div className="min-w-0">
+              <p className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 font-mono text-xs text-zinc-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                Analista Programador · Desarrollador Web
+              </p>
+              <h1
+                style={DISPLAY_FONT}
+                className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-zinc-50 [text-wrap:balance] sm:text-5xl lg:text-6xl"
+              >
+                Desarrollador Web Freelance.{" "}
+                <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
+                  Transformo tus ideas en sitios web que atraen clientes y
+                  generan ventas.
+                </span>
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+                Especializado en WordPress, E-commerce y desarrollo web a medida
+                para negocios que buscan crecer en el mundo digital.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <PrimaryButton href="#contacto" icon={ArrowRight}>
+                  Cotizar un proyecto
+                </PrimaryButton>
+                <GhostButton href="#proyectos">Ver mis proyectos</GhostButton>
+              </div>
+            </div>
+            <div className="min-w-0 pb-4">
+              <HeroMock />
+            </div>
+          </div>
+        </section>
+
+        {/* --------------------------- Sobre mí --------------------------- */}
+        <Section id="sobre-mi" eyebrow="Sobre mí" title="Quién está detrás del código">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+            <div className="min-w-0 space-y-4">
+              <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 font-mono text-sm font-bold text-zinc-950">
+                    KZ
+                  </span>
+                  <div>
+                    <p style={DISPLAY_FONT} className="font-semibold text-zinc-50">
+                      Kevin Zamorano
+                    </p>
+                    <p className="text-sm text-zinc-500">
+                      Analista Programador y Desarrollador Web
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center gap-3 border-t border-zinc-800 pt-5 text-sm text-zinc-400">
+                  <Camera className="h-4 w-4 shrink-0 text-cyan-400" />
+                  <span>Fotografía de paisajes</span>
+                  <Mountain className="ml-auto h-4 w-4 shrink-0 text-blue-400" />
+                </div>
+              </div>
+            </div>
+            <p className="min-w-0 max-w-[65ch] text-base leading-8 text-zinc-300 sm:text-lg sm:leading-9">
+              Hola, soy{" "}
+              <strong className="font-semibold text-zinc-50">Kevin Zamorano</strong>
+              , Analista Programador y Desarrollador Web. Me dedico a ayudar a
+              emprendedores y empresas a digitalizar sus negocios mediante sitios
+              web rápidos, autoadministrables y optimizados para la conversión. Mi
+              enfoque es 100% práctico: busco la mejor solución tecnológica para
+              que tu negocio venda más, ya sea con desarrollo a medida o gestores
+              como WordPress. Cuando no estoy optimizando código, me desconecto
+              manejando hacia la naturaleza para fotografiar paisajes y montañas,
+              lo que me ayuda a mantener la creatividad al máximo.
+            </p>
+          </div>
+        </Section>
+
+        {/* ----------------------- Servicios / Skills ---------------------- */}
+        <Section id="servicios" eyebrow="Servicios y tecnologías" title="Las herramientas con las que construyo tu sitio">
+          <div className="grid gap-5 sm:grid-cols-2">
+            {SKILLS.map(({ title, icon: Icon, items }) => (
+              <article
+                key={title}
+                className="min-w-0 rounded-xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-zinc-700"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-300">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3
+                    style={DISPLAY_FONT}
+                    className="text-lg font-semibold text-zinc-50"
+                  >
+                    {title}
+                  </h3>
+                </div>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {items.map(({ label, icon: BadgeIcon }) => (
+                    <li
+                      key={label}
+                      className="inline-flex items-center gap-2 rounded-md border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200"
+                    >
+                      <BadgeIcon className="h-3.5 w-3.5 text-blue-400" />
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </Section>
+
+                {/* --------------------------- Proyectos --------------------------- */}
+        <Section id="proyectos" eyebrow="Proyectos" title="Sitios que resuelven un problema de negocio">
+          <div className="space-y-16 sm:space-y-24">
+            {PROJECTS.map((p, i) => {
+              const shot = (
+                <div className="transition duration-300 group-hover:-translate-y-1">
+                  <ProjectShot p={p} />
+                </div>
+              );
+              return (
+                <article
+                  key={p.title}
+                  className="grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-14"
+                >
+                  {p.url ? (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Abrir ${p.domain}`}
+                      className={`group block min-w-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 ${i % 2 ? "lg:order-2" : ""}`}
+                    >
+                      {shot}
+                    </a>
+                  ) : (
+                    <div className={`group min-w-0 ${i % 2 ? "lg:order-2" : ""}`}>
+                      {shot}
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <p className="font-mono text-xs uppercase tracking-[0.14em] text-cyan-400">
+                      {p.type}
+                    </p>
+                    <h3
+                      style={DISPLAY_FONT}
+                      className="mt-2 text-2xl font-bold leading-snug text-zinc-50 [text-wrap:balance] sm:text-3xl"
+                    >
+                      {p.title}
+                    </h3>
+                    <dl className="mt-6 space-y-5 leading-relaxed">
+                      <div>
+                        <dt className="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500">
+                          Desafío
+                        </dt>
+                        <dd className="mt-1 text-zinc-300">{p.challenge}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500">
+                          Solución
+                        </dt>
+                        <dd className="mt-1 text-zinc-300">{p.solution}</dd>
+                      </div>
+                    </dl>
+                    <p className="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-zinc-500">
+                      Stack
+                    </p>
+                    <ul className="mt-2 flex flex-wrap gap-2">
+                      {p.stack.map((s) => (
+                        <li
+                          key={s}
+                          className="rounded-md bg-blue-500/10 px-2.5 py-1 font-mono text-xs text-blue-300"
+                        >
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                    {p.url && (
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-7 inline-flex flex-wrap items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-400 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+                      >
+                        Ver sitio
+                        <span className="font-mono text-xs font-normal text-zinc-400">
+                          {p.domain}
+                        </span>
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </Section>
+
+        {/* ---------------------------- Contacto --------------------------- */}
+        <Section id="contacto">
+          <div className="grid gap-10 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+            <div className="min-w-0">
+              <Eyebrow>Contacto</Eyebrow>
+              <h2
+                style={DISPLAY_FONT}
+                className="mt-3 text-3xl font-bold tracking-tight text-zinc-50 [text-wrap:balance] sm:text-4xl"
+              >
+                ¿Listo para llevar tu negocio al siguiente nivel digital?
+              </h2>
+              <a
+                href={waDirectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-cyan-400 px-6 py-4 text-base font-semibold text-zinc-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 sm:w-auto"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Hablemos por WhatsApp
+              </a>
+              <p className="mt-3 text-sm text-zinc-500">
+                Se abre WhatsApp en una pestaña nueva.
+              </p>
+              <ul className="mt-8 space-y-3 text-sm">
+                <li className="flex flex-wrap items-center gap-3">
+                  <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
+                  <span className="select-all break-all text-zinc-200">{EMAIL}</span>
+                  <button
+                    type="button"
+                    onClick={copyEmail}
+                    className="inline-flex items-center gap-1.5 rounded-md border border-zinc-700 px-2.5 py-1 text-xs text-zinc-300 transition hover:border-cyan-400 hover:text-cyan-300"
+                  >
+                    {copied ? (
+                      <Check className="h-3.5 w-3.5" />
+                    ) : (
+                      <Copy className="h-3.5 w-3.5" />
+                    )}
+                    {copied ? "Copiado" : "Copiar"}
+                  </button>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="h-4 w-4 shrink-0 text-cyan-400" />
+                  <span className="select-all text-zinc-200">{PHONE_LABEL}</span>
+                </li>
+              </ul>
+            </div>
+
+            <form onSubmit={handleSubmit} noValidate className="min-w-0 space-y-5">
+              <div>
+                <label htmlFor="cf-name" className="mb-1.5 block text-sm font-medium text-zinc-200">
+                  Nombre
+                </label>
+                <input
+                  id="cf-name"
+                  type="text"
+                  autoComplete="name"
+                  value={form.name}
+                  onChange={update("name")}
+                  aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "cf-name-err" : undefined}
+                  placeholder="Tu nombre"
+                  className={`${field} ${errors.name ? "border-red-400" : "border-zinc-700"}`}
+                />
+                {errors.name && (
+                  <p id="cf-name-err" className="mt-1.5 text-sm text-red-400">
+                    {errors.name}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label htmlFor="cf-email" className="mb-1.5 block text-sm font-medium text-zinc-200">
+                  Email
+                </label>
+                <input
+                  id="cf-email"
+                  type="email"
+                  autoComplete="email"
+                  value={form.email}
+                  onChange={update("email")}
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "cf-email-err" : undefined}
+                  placeholder="nombre@empresa.cl"
+                  className={`${field} ${errors.email ? "border-red-400" : "border-zinc-700"}`}
+                />
+                {errors.email && (
+                  <p id="cf-email-err" className="mt-1.5 text-sm text-red-400">
+                    {errors.email}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label htmlFor="cf-message" className="mb-1.5 block text-sm font-medium text-zinc-200">
+                  Mensaje
+                </label>
+                <textarea
+                  id="cf-message"
+                  rows={5}
+                  value={form.message}
+                  onChange={update("message")}
+                  aria-invalid={!!errors.message}
+                  aria-describedby={errors.message ? "cf-message-err" : undefined}
+                  placeholder="Cuéntame qué necesitas: tipo de sitio, plazos, referencias."
+                  className={`${field} resize-y ${errors.message ? "border-red-400" : "border-zinc-700"}`}
+                />
+                {errors.message && (
+                  <p id="cf-message-err" className="mt-1.5 text-sm text-red-400">
+                    {errors.message}
+                  </p>
+                )}
+              </div>
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:w-auto"
+              >
+                <Send className="h-4 w-4" />
+                Enviar Mensaje
+              </button>
+
+              <div aria-live="polite">
+                {ready && (
+                  <div className="rounded-lg border border-cyan-400/30 bg-cyan-400/5 p-4">
+                    <p className="text-sm text-zinc-200">
+                      Tu mensaje está listo. Para enviarlo, ábrelo en WhatsApp
+                      con los datos que escribiste.
+                    </p>
+                    <a
+                      href={waFormLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 rounded-md bg-cyan-400 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-cyan-300"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      Abrir en WhatsApp
+                    </a>
+                  </div>
+                )}
+              </div>
+            </form>
+          </div>
+        </Section>
+      </main>
+
+      {/* ----------------------------- Footer ----------------------------- */}
+      <footer className="border-t border-zinc-800">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <p>© 2026 Kevin Zamorano · Analista Programador y Desarrollador Web</p>
+          <a href="#inicio" className="text-zinc-400 hover:text-cyan-300">
+            Volver arriba
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Portfolio />);
+
 </script>
 </body>
 </html>
