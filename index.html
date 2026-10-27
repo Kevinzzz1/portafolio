@@ -201,6 +201,7 @@ const PROJECTS = [
     thumb: "store",
     url: "https://aspconveniomarco.cl/",
     domain: "aspconveniomarco.cl",
+    image: "img/aspconveniomarco.jpg",
     challenge: "Digitalizar catálogo y ventas online para marca de convenios.",
     solution:
       "E-commerce escalable, pasarelas de pago y panel autoadministrable.",
@@ -212,6 +213,7 @@ const PROJECTS = [
     thumb: "brand",
     url: "https://registralamarca.cl/",
     domain: "registralamarca.cl",
+    image: "img/registralamarca.jpg",
     challenge:
       "Presentar el servicio de registro de marcas y facilitar que los clientes hagan su consulta.",
     solution:
@@ -219,22 +221,12 @@ const PROJECTS = [
     stack: ["Desarrollo web"],
   },
   {
-    type: "Demo · Tienda online mobile-first",
-    title: "Tienda Online Panadería (Demo)",
-    thumb: "bakery",
-    demo: true,
-    challenge:
-      "Canal de ventas digital rápido para pedidos desde celulares.",
-    solution:
-      "UX mobile-first, compra en 3 clics y conexión directa a WhatsApp para despachos.",
-    stack: ["WordPress", "UI/UX Mobile", "API WhatsApp"],
-  },
-  {
     type: "Landing page · One page",
     title: "Landing Page Cerrajería 24/7",
     thumb: "locksmith",
     url: "https://www.cerrajeriamagakey.cl/",
     domain: "cerrajeriamagakey.cl",
+    image: "img/cerrajeriamagakey.jpg",
     challenge: "Captación urgente de leads (clientes) en buscadores.",
     solution:
       'Sitio "One Page" ultra rápido con botones de llamada de emergencia.',
@@ -246,6 +238,7 @@ const PROJECTS = [
     thumb: "concrete",
     url: "https://www.jcinversionesyvibrados.cl/",
     domain: "jcinversionesyvibrados.cl",
+    image: "img/jcinversionesyvibrados.jpg",
     challenge:
       "Mostrar el catálogo de prefabricados de hormigón y convertir las visitas en cotizaciones.",
     solution:
@@ -468,69 +461,6 @@ const ShotBrand = () => (
   </div>
 );
 
-/* ---- Panadería (demo): celular con pedido en 3 pasos y WhatsApp ---- */
-const ShotBakery = () => (
-  <div
-    className="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-black/50"
-    style={{
-      backgroundImage:
-        "radial-gradient(rgba(113,113,122,0.28) 1px, transparent 1px)",
-      backgroundSize: "16px 16px",
-    }}
-  >
-    <div className="flex h-[86%] w-[34%] min-w-[7.5rem] max-w-[11rem] flex-col overflow-hidden rounded-[1.6rem] border-4 border-zinc-700 bg-amber-50 shadow-xl">
-      <div className="bg-amber-500 px-3 py-2">
-        <span className="block h-2 w-14 rounded bg-white/90" />
-        <div className="mt-2 flex gap-1.5">
-          {["1", "2", "3"].map((n) => (
-            <span
-              key={n}
-              className="flex h-4 w-4 items-center justify-center rounded-full bg-white/90 font-mono text-[8px] font-bold text-amber-700"
-            >
-              {n}
-            </span>
-          ))}
-        </div>
-      </div>
-      <div className="flex-1 space-y-2 overflow-hidden p-2">
-        {[
-          "from-amber-300 to-orange-200",
-          "from-orange-300 to-amber-200",
-          "from-yellow-300 to-amber-200",
-        ].map((g, i) => (
-          <div key={i} className="flex items-center gap-2 rounded-lg bg-white p-1.5 shadow-sm">
-            <span className={`h-8 w-8 shrink-0 rounded-md bg-gradient-to-br ${g}`} />
-            <div className="min-w-0 flex-1">
-              <Bar className="w-4/5 bg-zinc-300" />
-              <Bar className="mt-1 w-2/5 bg-amber-300" />
-            </div>
-            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500 text-white">
-              <Plus className="h-3 w-3" />
-            </span>
-          </div>
-        ))}
-      </div>
-      <div className="m-2 flex items-center justify-center gap-1 rounded-lg bg-emerald-500 py-1.5 text-[9px] font-bold text-white">
-        <MessageCircle className="h-3 w-3" />
-        Pedir por WhatsApp
-      </div>
-    </div>
-    <div className="absolute right-[6%] top-[22%] flex max-w-[44%] items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-3 py-2 shadow-lg">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white">
-        <MessageCircle className="h-3.5 w-3.5" />
-      </span>
-      <div className="min-w-0">
-        <p className="truncate text-[10px] font-semibold text-zinc-100">Nuevo pedido</p>
-        <p className="truncate text-[9px] text-zinc-400">3 productos · despacho</p>
-      </div>
-    </div>
-    <div className="absolute bottom-[10%] left-[6%] hidden items-center gap-1.5 rounded-lg border border-zinc-700 bg-zinc-900 px-2.5 py-1.5 font-mono text-[10px] text-cyan-300 shadow-lg sm:flex">
-      <Zap className="h-3 w-3" />
-      Compra en 3 clics
-    </div>
-  </div>
-);
-
 /* ---- Cerrajería: llamada de emergencia + cobertura ---- */
 const ShotLocksmith = () => (
   <div className="flex h-full flex-col bg-zinc-900 text-zinc-100">
@@ -638,10 +568,17 @@ const ShotConcrete = () => (
 );
 
 const ProjectShot = ({ p }) => {
-  if (p.image) {
+  const [imgFailed, setImgFailed] = useState(false);
+  if (p.image && !imgFailed) {
     return (
       <BrowserFrame domain={p.domain}>
-        <img src={p.image} alt={`Captura de ${p.title}`} className="h-full w-full object-cover object-top" />
+        <img
+          src={p.image}
+          alt={`Captura de ${p.title}`}
+          loading="lazy"
+          onError={() => setImgFailed(true)}
+          className="h-full w-full object-cover object-top"
+        />
       </BrowserFrame>
     );
   }
@@ -653,11 +590,7 @@ const ProjectShot = ({ p }) => {
   }[p.thumb];
   return (
     <div className="relative">
-      {p.thumb === "bakery" ? (
-        <ShotBakery />
-      ) : (
-        <BrowserFrame domain={p.domain}>{body}</BrowserFrame>
-      )}
+      <BrowserFrame domain={p.domain}>{body}</BrowserFrame>
       <span className="absolute bottom-2 right-2 rounded bg-zinc-950/80 px-2 py-0.5 font-mono text-[10px] text-zinc-500">
         {p.demo ? "Demo / concepto" : "Vista ilustrativa"}
       </span>
