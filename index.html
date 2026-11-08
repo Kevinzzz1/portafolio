@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kevin Zamorano | Desarrollador Web Freelance</title>
-<meta name="description" content="Desarrollador web freelance especializado en WordPress, e-commerce y desarrollo a medida. Sitios rápidos y autoadministrables para negocios que quieren crecer.">
+<meta name="description" content="Kevin Zamorano, desarrollador web freelance en Chile. Diseño sitios web, e-commerce y soluciones digitales para emprendedores y empresas.">
 <meta name="theme-color" content="#09090b">
 <meta property="og:title" content="Kevin Zamorano | Desarrollador Web Freelance">
-<meta property="og:description" content="Páginas web y tiendas online rápidas y autoadministrables para emprendedores y pymes de todo Chile. Planes desde $50.000.">
+<meta property="og:description" content="Diseño y desarrollo de sitios web, tiendas online y soluciones digitales para negocios en Chile.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,17 @@
   html .font-sans { font-family: var(--font-body); }
   html .font-mono { font-family: var(--font-mono); }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* Pulido visual: fondo con profundidad, selección consistente y foco accesible. */
+  body {
+    background-image:
+      radial-gradient(ellipse at 12% 0%, rgba(34, 211, 238, .07), transparent 34%),
+      radial-gradient(ellipse at 88% 18%, rgba(37, 99, 235, .08), transparent 30%);
+    background-attachment: fixed;
+  }
+  a, button, input, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline-offset: 3px; }
+  img { max-width: 100%; }
 </style>
 </head>
 <body>
@@ -231,6 +242,19 @@ const PROJECTS = [
     solution:
       'Sitio "One Page" ultra rápido con botones de llamada de emergencia.',
     stack: ["HTML5", "CSS3", "JavaScript (A medida)"],
+  },
+  {
+    type: "Sitio web · Vivero / E-commerce",
+    title: "Vivero Jardín Las Rosas",
+    thumb: "store",
+    url: "https://www.viverojardinlasrosas.cl/",
+    domain: "viverojardinlasrosas.cl",
+    image: "img/viverojardinlasrosas.jpg",
+    challenge:
+      "Dar presencia digital a un vivero y facilitar que los clientes conozcan su oferta de plantas y se contacten con el negocio.",
+    solution:
+      "Sitio web para presentar el vivero, su catálogo y la información comercial, con una experiencia adaptable a celulares y computadores.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS"],
   },
   {
     type: "Sitio web · Construcción",
